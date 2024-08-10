@@ -1,0 +1,154 @@
+@use '../abstracts/' as *;
+
+// Hero
+
+.section_hero {
+  height: 100vh; 
+  padding-top: $header-size;
+  isolation: isolate;
+}
+
+.even-columns {
+  display: flex;
+
+  > * {
+    flex: 1
+  }
+}
+
+.hero_line {
+  width: 70%;
+  height: 2px;
+  background-color: $clr-accent;
+}
+
+.hero_presentation {
+  padding: 4rem;
+
+  @include mq(tablet) {
+    padding: 2rem 1rem;
+  }
+}
+
+.hero_presentation-wrapper {
+  margin-inline: auto;
+}
+
+.presentation_img {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  width: 50%;
+  opacity: 0.5;
+  z-index: -1;
+  display: none;
+
+  @include mq(tablet) {
+    display: block;
+  }
+}
+
+.hero_img-container {
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+
+// Skills
+
+#skills_section {
+  background-image: $gradient-primary;
+}
+
+.skills_wrapper {
+  margin-top: 3rem;
+
+  > * {
+    padding: 2rem;
+  }
+
+  @include mq(tablet) {
+    flex-direction: column;
+    margin-top: 2rem;
+
+    > * {
+      padding: 2rem 1rem;
+    }
+  }
+}
+
+.skill_ratio {
+  position: absolute;
+  bottom: 20px;
+  transform: translateX(-50%);
+  transition: 1s ease;
+  color: $fc-accent-light;
+}
+
+.skill_line {
+  width: 100%;
+  height: 10px;
+  border-radius: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.skill_line-ratio {
+  background-color: $clr-accent-dark;
+  transition: 1s ease;
+}
+
+.skill_line-wrapper {
+  max-width: 400px;
+}
+
+.skill_logo {
+  position: relative;
+  width: fit-content;
+  transition: 1s ease;
+
+  &::before {
+    content: attr(data-name);
+    color: $fc-primary;
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    text-align: center;
+    padding: 0.2rem 0.5rem;
+    transform: translateX(-50%) scale(0);
+    background-color: $clr-primary;
+    border: 1px solid $clr-accent-dark;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    opacity: 0.8;
+  }
+
+  &:hover {
+    &::before {
+      transform: translateX(-50%) scale(1);
+    }
+  }
+
+  img {
+    width: 64px;
+  }
+}
+
+.skill_logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  align-content: space-between;
+  gap: 1rem;
+
+  @include mq(tablet) {
+    gap: 1rem;
+  }
+}
+
+
+// Projects

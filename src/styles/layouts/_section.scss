@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+.section_content {
+  width: 100%;
+  max-width: 1440px;
+  isolation: isolate;
+  padding: 4rem 2rem;
+  margin-inline: auto;
+
+  @include mq(tablet) {
+    padding: 4rem 1rem;
+  }
+}

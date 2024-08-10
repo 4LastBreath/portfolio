@@ -1,0 +1,34 @@
+:root {
+  --clr-neutral-50: hsl(0, 0%, 93%);
+  --clr-neutral-100: hsl(0, 0%, 75%);
+  --clr-neutral-200: hsl(0, 0%, 62%);
+  --clr-neutral-300: hsl(0, 0%, 52%);
+  --clr-neutral-400: hsl(0, 0%, 42%);
+  --clr-neutral-500: hsl(0, 0%, 32%);
+  --clr-neutral-600: hsl(0, 0%, 22%);
+  --clr-neutral-700: hsl(0, 0%, 20%);
+  --clr-neutral-800: hsl(0, 0%, 17%);
+  --clr-neutral-850: hsl(0, 0%, 15%);
+  --clr-neutral-900: hsl(0, 0%, 13%);
+  
+  --clr-primary-dark: hsl(205, 67%, 10%); 
+  --clr-primary: hsl(205, 66%, 15%); 
+  --clr-primary-light: hsl(205, 67%, 20%); 
+
+  --clr-accent-dark: hsl(192, 100%, 39%);
+  --clr-accent: hsl(192, 100%, 49%);
+  --clr-accent-light: hsl(192, 100%, 70%);
+
+  --clr-border-hover: hsl(180, 100%, 30%);
+
+  --fc-primary: var(--clr-neutral-50);
+  --fc-accent: var(--clr-accent);
+  --fc-accent-light: hsl(192, 100%, 85%);
+
+  --gradient-primary: linear-gradient(75deg, hsl(205, 66%, 12%), var(--clr-primary-dark));;
+
+  --header-bg: hsl(205, 67%, 20%);
+  --header-fc: var(--clr-neutral-50);
+}
+
+

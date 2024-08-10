@@ -1,0 +1,31 @@
+@use '../abstracts/' as *;
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  background-color: $clr-primary;
+  padding-block: 1rem;
+
+  h1 {
+    font-size: 1.7rem;
+    color: $fc-accent-light;
+  }
+
+  .logo {
+    width: 35px;
+  }
+}
+
+.drawer_line {
+  width: 80%;
+  height: 2px;
+  background-color: $clr-accent-light;
+  opacity: 0.5;
+  margin-block: 1rem;
+}
+
+.nav-primary_link.nav-drawer-link {
+  padding-block: 1.2rem;
+}

@@ -1,0 +1,54 @@
+@use '../abstracts/' as *;
+
+// Primary Button
+
+.button {
+  position: relative;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background-color: #0d2b40;
+  padding: 14px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  color: $fc-accent-light;
+  transition: ease-out 0.25s;
+  font-weight: 500;
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 6px;
+    transition: ease-out 0.25s;
+  }
+
+  &::before {
+    transform: scale(0, 1);
+    border-top: 1px solid $clr-accent;
+    border-bottom: 1px solid $clr-accent;
+  }
+
+  &::after {
+    transform: scale(1, 1);
+    border-right: 1px solid $clr-accent;
+    border-left: 1px solid $clr-accent;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $fc-accent;
+    background-color: $clr-primary-light;
+    border: 2px solid $clr-border-hover;
+
+    &::before {
+      transform: scale(1, 1);
+    }
+  }
+
+  &:focus-visible {
+    outline: 1px solid $clr-accent-light;
+  }
+}
+
+

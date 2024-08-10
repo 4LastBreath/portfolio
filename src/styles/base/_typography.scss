@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+
+h1 {
+  font-size: clamp(2.3rem, 5vw, 2.8rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.1rem);
+  color: $fc-accent;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: $fw-medium;
+  opacity: 0.85;
+  text-wrap: pretty;
+  max-width: 40ch;
+}
