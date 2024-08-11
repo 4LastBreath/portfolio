@@ -4,13 +4,14 @@ import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import logo from '../styles/assets/img/logo.png'
 import { useCurrentWidth } from '../hooks/useScreenSize';
+import { HashLink } from 'react-router-hash-link';
+import { navLinks } from '../utils/navLinks';
 
 interface DrawerProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
-  scrollPosition: number
 }
 
-const Drawer = ({setIsOpen, scrollPosition} : DrawerProps) => {
+const Drawer = ({setIsOpen} : DrawerProps) => {
 
   const drawerAnimation = {
     initial: {
@@ -36,12 +37,9 @@ const Drawer = ({setIsOpen, scrollPosition} : DrawerProps) => {
 
   useEffect(() => {
     document.body.classList.add('no-scroll')
-    document.body.style.top = `-${scrollPosition}px`
 
     return () => {
       document.body.classList.remove('no-scroll')
-      document.body.style.top = ''
-      window.scrollTo({top: scrollPosition, left: 0, behavior: 'auto'})
     }
   }, [])
 
@@ -68,15 +66,18 @@ const Drawer = ({setIsOpen, scrollPosition} : DrawerProps) => {
 
     <nav className="nav-drawer | f-height">
         <ul className='nav-primary_list | flex flex-column'>
-          <li className='nav-primary_li'>
-            <NavLink className='nav-primary_link nav-drawer-link | relative' to='/'>Accueil</NavLink>
-          </li>
-          <li className='nav-primary_li'>
-            <NavLink className='nav-primary_link nav-drawer-link | relative' to='/'>Compétences</NavLink>
-          </li>
-          <li className='nav-primary_li'>
-            <NavLink className='nav-primary_link nav-drawer-link | relative' to='/'>Projets</NavLink>
-          </li>
+          {navLinks.map(link => (
+            <li className='nav-primary_li' key={link.name}>
+              <HashLink 
+                className={`${link.isActive(location.pathname, location.hash) ? 'nav-primary_link selected' : 'nav-primary_link'} nav-drawer-link | f-height relative`}
+                to={link.path}
+                onClick={() => setIsOpen(false)}
+                scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+              >
+                {link.name}
+              </HashLink>
+            </li>
+          ))}
         </ul>
     </nav>
 

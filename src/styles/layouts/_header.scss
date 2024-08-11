@@ -40,7 +40,7 @@ header {
 .nav-primary_li {
   transition: 0.2s ease;
 
-  &:has(.nav-primary_link:hover, .nav-primary_link:focus-visible) {
+  &:has(.nav-primary_link:hover, .nav-primary_link:focus-visible, .nav-primary_link.selected) {
     background-color: hsl(205, 67%, 30%);
   }
 }
@@ -76,7 +76,8 @@ header {
   }
 
   &:hover,
-  &:focus-visible {
+  &:focus-visible,
+  &.selected {
 
     color: $fc-accent-light;
 

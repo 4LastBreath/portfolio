@@ -1,12 +1,18 @@
 import logo from '../styles/assets/img/logo.png'
 import { NavLink } from 'react-router-dom';
 import { Menu } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
+import { navLinks } from '../utils/navLinks';
+import { useLocation } from 'react-router-dom';
 
 interface HeaderProps {
   setIsDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const Header = ({setIsDrawerOpen} : HeaderProps) => {
+
+  const location = useLocation()
+
   return (
 <header className='f-width'>
         
@@ -17,15 +23,17 @@ const Header = ({setIsDrawerOpen} : HeaderProps) => {
 
     <nav className="nav-primary | f-height">
       <ul className='nav-primary_list | flex f-height'>
-        <li className='nav-primary_li'>
-          <NavLink className='nav-primary_link | f-height relative' to='/'>Accueil</NavLink>
-        </li>
-        <li className='nav-primary_li'>
-          <NavLink className='nav-primary_link | f-height relative' to='/'>Compétences</NavLink>
-        </li>
-        <li className='nav-primary_li'>
-          <NavLink className='nav-primary_link | f-height relative' to='/'>Projets</NavLink>
-        </li>
+        
+        {navLinks.map(link => (
+          <li className='nav-primary_li' key={link.name}>
+            <HashLink 
+              className={`${link.isActive(location.pathname, location.hash) ? 'nav-primary_link selected' : 'nav-primary_link'} | f-height relative`}
+              to={link.path}
+              >
+               {link.name}
+            </HashLink>
+          </li>
+        ))}
       </ul>
     </nav>
 

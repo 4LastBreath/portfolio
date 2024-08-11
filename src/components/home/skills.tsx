@@ -6,7 +6,7 @@ import sass from '../../styles/assets/img/sass.png';
 import mongoDb from '../../styles/assets/img/mongoDB.png';
 import expressJS from '../../styles/assets/img/expressJS.png';
 import SkillLogoContainer from '../skills/skillLogoContainer';
-import Section from '../../layouts/section';
+import SectionHash from '../../layouts/sectionHash';
 import ShapeDivider from '../../ui/shapeDivider';
 
 const Skills = () => {
@@ -45,10 +45,9 @@ const Skills = () => {
   ]
 
   return (
-<Section id='skills_section'>
+<SectionHash id='skills'>
 
       <ShapeDivider position='top'/>
-
       <h2 className='text-center'>Compétences</h2>
       <p className='text-center mx-auto mt-100'>
         Grâce à mon apprentissage en auto-formation, j'ai acquis des compétences en HTML, CSS, JavaScript et en frameworks/librairies modernes
@@ -80,7 +79,7 @@ const Skills = () => {
 
     <ShapeDivider position='bottom' />
 
-</Section>
+</SectionHash>
   );
 };
 

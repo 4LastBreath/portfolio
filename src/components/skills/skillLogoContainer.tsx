@@ -13,8 +13,6 @@ const SkillLogoContainer = ({children, name} : SkillLogoContainerProps) => {
 
   const randomX = Math.round(Math.random() * 50) - 20;
 
-
-
   useEffect(() => {
     const el = ref.current
 

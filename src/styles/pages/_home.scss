@@ -8,14 +8,6 @@
   isolation: isolate;
 }
 
-.even-columns {
-  display: flex;
-
-  > * {
-    flex: 1
-  }
-}
-
 .hero_line {
   width: 70%;
   height: 2px;
@@ -49,7 +41,7 @@
 }
 
 .hero_img-container {
-
+  
   @include mq(tablet) {
     display: none;
   }
@@ -114,7 +106,7 @@
     content: attr(data-name);
     color: $fc-primary;
     position: absolute;
-    top: -38px;
+    top: -42px;
     left: 50%;
     text-align: center;
     padding: 0.2rem 0.5rem;

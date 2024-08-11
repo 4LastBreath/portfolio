@@ -3,12 +3,13 @@ import { PropsWithChildren } from 'react';
 import Header from '../components/header';
 import Drawer from '../components/drawer';
 import { AnimatePresence } from 'framer-motion';
-import useScrollPosition from '../hooks/useScrollPosition';
 
 const Layout = ({children}: PropsWithChildren) => {
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-  const scrollPosition = useScrollPosition()
+  // const scrollPosition = useScrollPosition()
+
+  console.log(isDrawerOpen)
 
   return (
   <>
@@ -18,7 +19,7 @@ const Layout = ({children}: PropsWithChildren) => {
     </div>
 
     <AnimatePresence initial={false}>
-      {isDrawerOpen && <Drawer scrollPosition={scrollPosition} setIsOpen={setIsDrawerOpen}/>}
+      {isDrawerOpen && <Drawer setIsOpen={setIsDrawerOpen}/>}
     </AnimatePresence>
     
   </>

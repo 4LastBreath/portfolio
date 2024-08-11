@@ -1,0 +1,7 @@
+.even-columns {
+  display: flex;
+
+  > * {
+    flex: 1
+  }
+}

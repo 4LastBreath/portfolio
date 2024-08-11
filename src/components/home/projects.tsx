@@ -1,12 +1,12 @@
-import React from 'react';
-import Section from '../../layouts/section';
+import SectionHash from "../../layouts/sectionHash";
 
 const Projects = () => {
+
   return (
-<Section id='projects_section'>
+<SectionHash id='projects'>
   <h2 className='text-center'>Projets</h2>
   <p className='text-center mx-auto mt-100'>Vous trouverez ci-joint un aperçu de mes projets réalisés en développement web</p>
-</Section>
+</SectionHash>
   );
 };
 
