@@ -31,7 +31,7 @@ const Hero = () => {
     
     const section = document.getElementById('skills');
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
