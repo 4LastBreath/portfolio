@@ -52,7 +52,7 @@ const SkillLine = ({title, ratio} : SkillsLineProps) => {
   return (
 
 <div className='skill_line-wrapper | relative f-width'>
-    <h3>{title.toUpperCase()}</h3>
+    <h3 className='skill_line-title'>{title.toUpperCase()}</h3>
     <div className='skill_ratio' ref={ratioRef}>{`${ratio}%`}</div>
     <div className='skill_line'>
         <div className='skill_line-ratio | f-height' ref={lineRatioRef}/>

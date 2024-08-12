@@ -41,8 +41,8 @@ const Projects = () => {
   <div className="projects_container | flex align-center justify-center gap-200 wrap">
 
     {projectsArr.map((project, i) => (
-    <ProjectCard cardIndex={i}>
-        <Link className="project_link | flex flex-column space-between align-center relative text-center" to={project.link} target="_blank" key={project.title}>
+    <ProjectCard cardIndex={i} key={project.title}>
+        <Link className="project_link | flex flex-column space-between align-center relative text-center" to={project.link} target="_blank">
           <h3 className="project_title">{project.title}</h3>
           <div className="project_logos-container | flex justify-center gap-200">
 

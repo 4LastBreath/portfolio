@@ -7,7 +7,7 @@ interface SectionProps {
 
 export const Section = forwardRef<HTMLElement, SectionProps>(({id, children} : SectionProps, ref) => {
   return (
-<section className='section relative' id={id} ref={ref}>
+<section className='relative' id={id} ref={ref}>
     <div className='section_content'>
        {children}
     </div>

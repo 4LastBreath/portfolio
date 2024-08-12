@@ -3,9 +3,9 @@
 // Hero
 
 .section_hero {
-  height: 100vh;
-  height: 100svh;
-  padding-top: $header-size;
+  height: calc(100vh - $header-size);
+  height: calc(100svh - $header-size);
+  margin-top: $header-size;
   isolation: isolate;
 }
 
@@ -85,6 +85,17 @@
   background-color: rgba(0, 0, 0, 0.5);
   margin-top: 0.5rem;
   overflow: hidden;
+}
+
+.skill_line-title {
+
+  @include mq(phone-wide) {
+    font-size: 1.1rem;
+  }
+
+  @include mq(phone) {
+    font-size: 1rem;
+  }
 }
 
 .skill_line-ratio {
