@@ -20,7 +20,7 @@ const SectionHash = ({id, children}: SectionHashProps) => {
 
     const timeout = setTimeout(() => {
       if (!inView) return
-      if (inView) navigate(`/portfolio#${id}`, { replace: true });
+      if (inView) navigate(`/portfolio#${id}`);
     }, 100)
 
     return () => {
