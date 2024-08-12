@@ -32,7 +32,7 @@ const Header = ({setIsDrawerOpen} : HeaderProps) => {
             <HashLink 
               className={`${link.isActive(location.pathname, location.hash) ? 'nav-primary_link selected' : 'nav-primary_link'} | f-height relative`}
               to={link.path}
-              scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
+              scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: link.path === '/portfolio/#hero' ? 'end' : 'start'})}
               >
                {link.name}
             </HashLink>
