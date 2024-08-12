@@ -9,7 +9,6 @@
 }
 
 .hero_line {
-  width: 70%;
   height: 2px;
   background-color: $clr-accent;
 }
@@ -50,12 +49,11 @@
 
 // Skills
 
-#skills_section {
+#skills {
   background-image: $gradient-primary;
 }
 
-.skills_wrapper {
-  margin-top: 3rem;
+.skills_container {
 
   > * {
     padding: 2rem;
@@ -123,10 +121,6 @@
       transform: translateX(-50%) scale(1);
     }
   }
-
-  img {
-    width: 64px;
-  }
 }
 
 .skill_logo-grid {
@@ -144,3 +138,66 @@
 
 
 // Projects
+
+.projects_container {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project_card {
+  transition: 1s ease;
+}
+
+.project_link {
+  color: $fc-primary;
+  height: 190px;
+  width: 250px;
+  background-color: $clr-primary;
+  border: 2px solid $clr-primary-light;
+  padding: 1.8rem 1rem;
+  border-radius: 8px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    transition: ease-out 0.25s;
+  }
+
+  &::before {
+    transform: scale(0, 1);
+    border-top: 2px solid $clr-accent-dark;
+    border-bottom: 2px solid $clr-accent-dark;
+  }
+
+  &::after {
+    transform: scale(1, 0);
+    border-right: 2px solid $clr-accent-dark;
+    border-left: 2px solid $clr-accent-dark;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $fc-accent;
+    background-color: $clr-primary;
+    border: 2px solid $clr-accent-dark;
+
+    &::before {
+      transform: scale(0.4, 1);
+    }
+
+    &::after {
+      transform: scale(1, 0.4);
+    }
+  }
+
+  &:focus-visible {
+    outline: 1px solid $clr-accent-light;
+  }
+
+}
+
+.project_logo-wrapper {
+    width: 50px;
+}

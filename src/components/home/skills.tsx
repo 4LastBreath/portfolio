@@ -1,46 +1,36 @@
 import SkillLine from '../skills/skillLine';
-import nextJS from '../../styles/assets/img/nextJS.png';
-import nodeJS from '../../styles/assets/img/nodeJS.png';
-import react from '../../styles/assets/img/react.png';
-import sass from '../../styles/assets/img/sass.png';
-import mongoDb from '../../styles/assets/img/mongoDB.png';
-import expressJS from '../../styles/assets/img/expressJS.png';
 import SkillLogoContainer from '../skills/skillLogoContainer';
 import SectionHash from '../../layouts/sectionHash';
 import ShapeDivider from '../../ui/shapeDivider';
+import { SectionParagraph, SectionTitle } from '../../layouts/section';
+import { ExpressJSLogo, MongoDbLogo, NextJSLogo, NodeJSLogo, ReactLogo, SassLogo } from '../logos';
 
 const Skills = () => {
 
   const skillLogoArr = [
     {
-      src: react,
-      alt: "logo react",
-      name: 'React'
+      name: 'React',
+      element: <ReactLogo />
     },
     {
-      src: nextJS,
-      alt: "logo nextJS",
-      name: 'NextJS'
+      name: 'NextJS',
+      element: <NextJSLogo />
     },
     {
-      src: sass,
-      alt: "logo sass",
-      name: 'Sass'
+      name: 'Sass',
+      element: <SassLogo />
     },
     {
-      src: nodeJS,
-      alt: "logo nodeJS",
-      name: 'NodeJS'
+      name: 'NodeJS',
+      element: <NodeJSLogo />
     },
     {
-      src: mongoDb,
-      alt: "logo mongoDB",
-      name: 'MongoDB'
+      name: 'MongoDB',
+      element: <MongoDbLogo />
     },
     {
-      src: expressJS,
-      alt: "logo expressJS",
-      name: 'ExpressJS'
+      name: 'ExpressJS',
+      element: <ExpressJSLogo />
     },
   ]
 
@@ -48,19 +38,20 @@ const Skills = () => {
 <SectionHash id='skills'>
 
       <ShapeDivider position='top'/>
-      <h2 className='text-center'>Compétences</h2>
-      <p className='text-center mx-auto mt-100'>
-        Grâce à mon apprentissage en auto-formation, j'ai acquis des compétences en HTML, CSS, JavaScript et en frameworks/librairies modernes
-      </p>
       
-  <div className='skills_wrapper | even-columns'>
+      <SectionTitle>Compétences</SectionTitle>
+      <SectionParagraph>
+        Grâce à mon apprentissage en auto-formation, j'ai acquis des compétences en HTML, CSS, JavaScript et en frameworks/librairies modernes
+      </SectionParagraph>
+      
+  <div className='skills_container | even-columns'>
 
 
         <div className='skill_logo-grid'>
 
           {skillLogoArr.map((logo) => (
             <SkillLogoContainer name={logo.name} key={logo.name}>
-              <img src={logo.src} alt={logo.alt}/>
+                {logo.element}
             </SkillLogoContainer>
           ))}
 

@@ -20,17 +20,3 @@
   background-color: $clr-primary;
   width: 10px;
 }
-
-textarea::-webkit-scrollbar {
-  padding: 5px 0;
-  width: 6px;
-  background-color: transparent;
-}
-
-textarea::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-}
-
-textarea::-webkit-scrollbar-button {
-  height: 4px;
-}

@@ -6,7 +6,7 @@
   position: relative;
   font-size: 1.1rem;
   border-radius: 8px;
-  background-color: #0d2b40;
+  background-color: $clr-primary;
   padding: 14px;
   cursor: pointer;
   border: 2px solid transparent;
@@ -39,7 +39,7 @@
   &:focus-visible {
     color: $fc-accent;
     background-color: $clr-primary-light;
-    border: 2px solid $clr-border-hover;
+    border: 2px solid $clr-accent;
 
     &::before {
       transform: scale(1, 1);
@@ -48,6 +48,16 @@
 
   &:focus-visible {
     outline: 1px solid $clr-accent-light;
+  }
+}
+
+.button.secondary {
+  background-color: hsl(199, 99%, 32%);
+  color: $clr-neutral-50;
+
+  &:hover {
+    color: $fc-accent;
+    background-color: hsl(199, 99%, 18%);
   }
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Backdrop from '../layouts/backdrop';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import logo from '../styles/assets/img/logo.png'
 import { useCurrentWidth } from '../hooks/useScreenSize';
@@ -34,6 +34,7 @@ const Drawer = ({setIsOpen} : DrawerProps) => {
   }
 
   const { tablet } = useCurrentWidth()
+  const location = useLocation()
 
   useEffect(() => {
     document.body.classList.add('no-scroll')

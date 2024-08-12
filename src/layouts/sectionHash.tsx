@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Section from './section';
+import { Section } from './section';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,9 +17,16 @@ const SectionHash = ({id, children}: SectionHashProps) => {
   });
 
   useEffect(() => {
-    if (inView) {
-      navigate(`/#${id}`, { replace: true });
+
+    const timeout = setTimeout(() => {
+      if (!inView) return
+      if (inView) navigate(`/#${id}`, { replace: true });
+    }, 100)
+
+    return () => {
+      clearTimeout(timeout)
     }
+
   }, [inView, navigate, id])
 
 

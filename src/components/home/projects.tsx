@@ -1,11 +1,64 @@
 import SectionHash from "../../layouts/sectionHash";
+import { Link } from "react-router-dom";
+import { SectionTitle, SectionParagraph } from "../../layouts/section";
+import { JavascriptLogo, ReactLogo, SassLogo, TypescriptLogo } from "../logos";
+import ProjectCard from "../projects/projectCard";
 
 const Projects = () => {
 
+  const projectsArr = [
+    {
+      title: 'Expenses Calculator',
+      link: 'https://4lastbreath.github.io/expenses-calculator/',
+      logos: [
+        <ReactLogo />,
+        <TypescriptLogo />,
+        <SassLogo />
+      ]
+    },
+    {
+      title: 'Landing Page',
+      link: 'https://4lastbreath.github.io/Fylo-dark-theme-landing-page-master/',
+      logos: [
+        <JavascriptLogo />,
+      ]
+    },
+    {
+      title: 'Time Tracking Dashboard',
+      link: 'https://4lastbreath.github.io/Time-tracking-dashboard-main/',
+      logos: [
+        <JavascriptLogo />,
+      ]
+    }
+  ]
+
   return (
 <SectionHash id='projects'>
-  <h2 className='text-center'>Projets</h2>
-  <p className='text-center mx-auto mt-100'>Vous trouverez ci-joint un aperçu de mes projets réalisés en développement web</p>
+
+  <SectionTitle>Projets</SectionTitle>
+  <SectionParagraph>Vous trouverez ci-joint un aperçu de mes projets réalisés en développement web</SectionParagraph>
+
+  <div className="projects_container | flex align-center justify-center gap-200 wrap">
+
+    {projectsArr.map((project, i) => (
+    <ProjectCard cardIndex={i}>
+        <Link className="project_link | flex flex-column space-between align-center relative text-center" to={project.link} target="_blank" key={project.title}>
+          <h3 className="project_title">{project.title}</h3>
+          <div className="project_logos-container | flex justify-center gap-200">
+
+            {project.logos.map((logo, i) => (
+              <div className="project_logo-wrapper" key={i}>
+                {logo}
+              </div>
+            ))}
+
+          </div>
+        </Link>
+      </ProjectCard>
+    ))}
+
+
+  </div>
 </SectionHash>
   );
 };
