@@ -27,7 +27,7 @@ const Hero = () => {
   const navigate = useNavigate()
 
   const handleAboutClick = () => {
-    navigate('/portfolio#skills');
+    navigate('/portfolio/#skills');
     
     const section = document.getElementById('skills');
     if (section) {
@@ -45,7 +45,7 @@ const Hero = () => {
 
   useEffect(() => {
     if (inView) {
-      navigate('/#hero', { replace: true });
+      navigate('/portfolio/#hero', { replace: true });
     }
 
   }, [inView, navigate])

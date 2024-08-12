@@ -1,17 +1,17 @@
 export const navLinks = [
   {
     name: 'Accueil',
-    path: '/#hero',
+    path: '/portfolio/#hero',
     isActive: (pathname: string, hash: string) => pathname === '/portfolio' && hash === '#hero',
   },
   {
     name: 'Compétences',
-    path: '/#skills',
+    path: '/portfolio/#skills',
     isActive: (pathname: string, hash: string) => pathname === '/portfolio' && hash === '#skills',
   },
   {
     name: 'Projets',
-    path: '/#projects',
+    path: '/portfolio/#projects',
     isActive: (pathname: string, hash: string) => pathname === '/portfolio' && hash === '#projects',
   }
 ];
