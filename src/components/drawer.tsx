@@ -73,7 +73,7 @@ const Drawer = ({setIsOpen} : DrawerProps) => {
                 className={`${link.isActive(location.pathname, location.hash) ? 'nav-primary_link selected' : 'nav-primary_link'} nav-drawer-link | f-height relative`}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
               >
                 {link.name}
               </HashLink>

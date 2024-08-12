@@ -1,5 +1,4 @@
 import logo from '../styles/assets/img/logo.png'
-import { NavLink } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 import { navLinks } from '../utils/navLinks';
@@ -16,10 +15,14 @@ const Header = ({setIsDrawerOpen} : HeaderProps) => {
   return (
 <header className='f-width'>
         
-    <NavLink to='/' className="logo-link | flex gap-100 align-center">
+    <HashLink 
+      to='/portfolio/#hero' 
+      className="logo-link | flex gap-100 align-center"
+      scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
+    >
       <img className='logo' src={logo}/>
       <h1>Portfolio</h1>
-    </NavLink>
+    </HashLink>
 
     <nav className="nav-primary | f-height">
       <ul className='nav-primary_list | flex f-height'>
@@ -29,6 +32,7 @@ const Header = ({setIsDrawerOpen} : HeaderProps) => {
             <HashLink 
               className={`${link.isActive(location.pathname, location.hash) ? 'nav-primary_link selected' : 'nav-primary_link'} | f-height relative`}
               to={link.path}
+              scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
               >
                {link.name}
             </HashLink>
