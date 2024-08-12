@@ -27,7 +27,7 @@ const Hero = () => {
   const navigate = useNavigate()
 
   const handleAboutClick = () => {
-    navigate('/#skills');
+    navigate('/portfolio#skills');
     
     const section = document.getElementById('skills');
     if (section) {
