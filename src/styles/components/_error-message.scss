@@ -1,0 +1,8 @@
+@use '../abstracts/' as *;
+
+.error-message {
+  font-size: 0.8rem;
+  text-align: center;
+  color: $clr-error;
+  font-weight: $fw-regular;
+}

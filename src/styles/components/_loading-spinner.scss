@@ -1,0 +1,9 @@
+.loading-spinner_wrapper {
+  height: 21px;
+  width: fit-content;
+}
+
+.loading-spinner {
+  animation: 1s spin linear infinite;
+  transform: rotate(0);
+}

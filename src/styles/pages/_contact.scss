@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+
+.contact_form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact_cord {
+  color: $fc-accent-light;
+}

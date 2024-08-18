@@ -2,13 +2,6 @@
 
 // Hero
 
-.section_hero {
-  height: calc(100vh - $header-size);
-  height: calc(100svh - $header-size);
-  margin-top: $header-size;
-  isolation: isolate;
-}
-
 .hero_line {
   height: 2px;
   background-color: $clr-accent;
@@ -153,7 +146,7 @@
 
 .projects_container {
   padding: 2rem;
-  margin-bottom: 2rem;
+  max-width: 1000px;
 }
 
 .project_card {

@@ -36,7 +36,8 @@
   }
 
   &:hover,
-  &:focus-visible {
+  &:focus-visible,
+  &.loading {
     color: $fc-accent;
     background-color: $clr-primary-light;
     border: 2px solid $clr-accent;
@@ -53,11 +54,25 @@
 
 .button.secondary {
   background-color: hsl(199, 99%, 32%);
-  color: $clr-neutral-50;
 
   &:hover {
     color: $fc-accent;
     background-color: hsl(199, 99%, 18%);
+  }
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $clr-neutral-50;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    filter: brightness(2);
   }
 }
 

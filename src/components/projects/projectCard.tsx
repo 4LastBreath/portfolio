@@ -14,7 +14,7 @@ const ProjectCard = ({children, cardIndex} : ProjectCardProps) => {
     const card = cardRef.current
 
     if (card) {
-      card.style.transitionDelay = `${cardIndex * 0.2}s`
+      card.style.transitionDelay = `${cardIndex * 0.1}s`
       card.style.opacity = isInView ? '1' : '0'
       card.style.transform = isInView ? 'translateY(0)' : `translateY(-40px)`
     }

@@ -29,3 +29,31 @@
 .nav-primary_link.nav-drawer-link {
   padding-block: 1.2rem;
 }
+
+.drawer_close-btn {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $clr-primary-light;
+  border: 2px solid hsla(204, 66%, 33%, 0.9);
+  color: $fc-accent-light;
+  cursor: pointer;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    border: 2px solid $clr-accent-dark;
+    color: $fc-accent;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $clr-accent-light;
+  }
+}

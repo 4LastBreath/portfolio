@@ -1,7 +1,7 @@
 import SkillLine from '../skills/skillLine';
 import SkillLogoContainer from '../skills/skillLogoContainer';
 import SectionHash from '../../layouts/sectionHash';
-import ShapeDivider from '../../ui/shapeDivider';
+import ShapeDivider from '../ui/shapeDivider';
 import { SectionParagraph, SectionTitle } from '../../layouts/section';
 import { ExpressJSLogo, MongoDbLogo, NextJSLogo, NodeJSLogo, ReactLogo, SassLogo } from '../logos';
 
@@ -44,7 +44,7 @@ const Skills = () => {
         Grâce à mon apprentissage en auto-formation, j'ai acquis des compétences en HTML, CSS, JavaScript et en frameworks/librairies modernes
       </SectionParagraph>
       
-  <div className='skills_container | even-columns'>
+  <div className='skills_container | even-columns f-width'>
 
 
         <div className='skill_logo-grid'>

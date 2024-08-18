@@ -1,0 +1,89 @@
+@use '../abstracts/' as *;
+
+.input-text_wrapper {
+  position: relative;
+  padding-bottom: 3px;
+  border-radius: 6px;
+  width: 100%;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+  }
+
+  &::before {
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 0;
+    background-color: $clr-accent;
+    transition: 0.3s ease;
+  }
+
+  &::after {
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &:has(.input-text:focus-visible) {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &:has(.input-text.valid) {
+    &::before {
+      width: 100%;
+      background-color: $clr-valid;
+    }
+  }
+
+  &:has(.input-text.invalid) {
+    &::before {
+      width: 100%;
+      background-color: $clr-error;
+    }
+  }
+}
+
+.input-text {
+  background-color: $clr-primary;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  color: $fc-primary;
+  font-size: 1rem;
+  overflow: visible;
+  caret-color: $clr-accent;
+  width: 100%;
+}
+
+.input-text_label {
+  color: $fc-accent-light;
+  margin-left: 0.25rem;
+}
+
+// Textarea
+
+.input-text_wrapper.textarea {
+  padding-bottom: 0;
+
+  &::before,
+  &::after {
+    bottom: 3px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
+
+.input-text.textarea {
+  resize: none;
+  line-height: 1.5;
+}

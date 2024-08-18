@@ -2,12 +2,13 @@ import React, { forwardRef, PropsWithChildren } from 'react';
 
 interface SectionProps {
   id: string,
-  children: React.ReactNode
+  children: React.ReactNode,
+  firstSection?: boolean,
 }
 
-export const Section = forwardRef<HTMLElement, SectionProps>(({id, children} : SectionProps, ref) => {
+export const Section = forwardRef<HTMLElement, SectionProps>(({id, firstSection, children} : SectionProps, ref) => {
   return (
-<section className='relative' id={id} ref={ref}>
+<section className={`${firstSection ? 'first_section | relative' : 'relative'}`} id={id} ref={ref}>
     <div className='section_content'>
        {children}
     </div>

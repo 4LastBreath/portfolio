@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 import logo from '../styles/assets/img/logo.png'
 import { useCurrentWidth } from '../hooks/useScreenSize';
 import { HashLink } from 'react-router-hash-link';
-import { navLinks } from '../utils/navLinks';
+import { navLinks, hashLinks } from '../utils/navLinks';
+import { ChevronLeft } from 'lucide-react';
 
 interface DrawerProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -53,13 +54,14 @@ const Drawer = ({setIsOpen} : DrawerProps) => {
   return (
 <Backdrop onClick={() => setIsOpen(false)}>
   <motion.div 
-    className='drawer' 
+    className='drawer | relative' 
     onClick={(e) => e.stopPropagation()}
     {...drawerAnimation}
+    aria-hidden={false}
   >
 
     <NavLink to='/' className="logo-link | flex gap-100 align-center justify-center">
-      <img className='logo' src={logo}/>
+      <img className='logo' src={logo} alt='logo'/>
       <h1>Portfolio</h1>
     </NavLink>
 
@@ -67,7 +69,7 @@ const Drawer = ({setIsOpen} : DrawerProps) => {
 
     <nav className="nav-drawer | f-height">
         <ul className='nav-primary_list | flex flex-column'>
-          {navLinks.map(link => (
+          {hashLinks.map(link => (
             <li className='nav-primary_li' key={link.name}>
               <HashLink 
                 className={`${link.isActive(location.pathname, location.hash) ? 'nav-primary_link selected' : 'nav-primary_link'} nav-drawer-link | f-height relative`}
@@ -79,8 +81,25 @@ const Drawer = ({setIsOpen} : DrawerProps) => {
               </HashLink>
             </li>
           ))}
+
+          {navLinks.map(link => (
+            <li className='nav-primary_li' key={link.name}>
+              <NavLink 
+                className={({ isActive }) => 
+                  `${isActive ? "nav-primary_link selected" : "nav-primary_link"} nav-drawer-link | relative `
+                }
+                to={link.path}
+                >
+                {link.name}
+              </NavLink>
+            </li>
+          ))}
         </ul>
     </nav>
+
+    <button className='drawer_close-btn' onClick={() => setIsOpen(false)} aria-label='close'>
+      <ChevronLeft />
+    </button>
 
   </motion.div>
 </Backdrop>

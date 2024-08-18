@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { Plus } from 'lucide-react';
-import { Button } from '../../ui/button';
+import { Button } from '../ui/button';
 import cube from '../../styles/assets/img/cube.png'
 import { useNavigate } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { routes } from '../../routes/routes';
 
 const Hero = () => {
 
@@ -27,16 +28,12 @@ const Hero = () => {
   const navigate = useNavigate()
 
   const handleAboutClick = () => {
-    navigate('/portfolio/#skills');
+    navigate(`${routes.home}#skills`);
     
     const section = document.getElementById('skills');
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  };
-
-  const handleContactClick = () => {
-    window.location.href = 'mailto:mymail@gmail.com';
   };
 
   const { ref, inView } = useInView({
@@ -45,7 +42,7 @@ const Hero = () => {
 
   useEffect(() => {
     if (inView) {
-      navigate('/portfolio/#hero', { replace: true });
+      navigate(`${routes.home}#hero`, { replace: true });
     }
 
   }, [inView, navigate])
@@ -53,7 +50,7 @@ const Hero = () => {
 
 
 return (
-<section className="section_hero | even-columns relative f-width" id='hero' ref={ref}>
+<section className="first_section | even-columns relative f-width" id='hero' ref={ref}>
 
   <div className="hero_presentation | flex flex-column space-between text-left f-height">
 
@@ -77,7 +74,7 @@ return (
 
         <div className='flex gap-100'>
           <Button variant="primary" onClick={handleAboutClick}>En Savoir Plus</Button>
-          <Button variant="secondary" onClick={handleContactClick}>Contact</Button>
+          <Button variant="secondary" onClick={() => {navigate(routes.contact);}}>Contact</Button>
         </div>
 
       </div>

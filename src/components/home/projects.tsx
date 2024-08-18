@@ -20,14 +20,28 @@ const Projects = () => {
       title: 'Landing Page',
       link: 'https://4lastbreath.github.io/Fylo-dark-theme-landing-page-master/',
       logos: [
-        <JavascriptLogo />,
+        <JavascriptLogo />
+      ]
+    },
+    {
+      title: 'Interactive Card Form',
+      link: 'https://4lastbreath.github.io/Interactive-card-details-form-main/',
+      logos: [
+        <JavascriptLogo />
       ]
     },
     {
       title: 'Time Tracking Dashboard',
       link: 'https://4lastbreath.github.io/Time-tracking-dashboard-main/',
       logos: [
-        <JavascriptLogo />,
+        <JavascriptLogo />
+      ]
+    },
+    {
+      title: 'Age Calculator',
+      link: 'https://4lastbreath.github.io/Age-calculator-app-main/',
+      logos: [
+        <JavascriptLogo />
       ]
     }
   ]

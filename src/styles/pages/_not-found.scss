@@ -1,0 +1,24 @@
+@use '../abstracts/' as *;
+
+.not-found {
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+.not-found figcaption a {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.not-found svg {
+  width: 500px;
+
+  @include mq(tablet-small) {
+    width: 100%;
+  }
+}
+
+.not-found_404 {
+  font-size: clamp(3rem, 5vw, 3.5rem);
+  line-height: 1;
+}
