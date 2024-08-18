@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brian Fritz - Error 404</title>
+  </head>
+  <body>
+    <div id="root">
+      <div className='not-found | flex flex-column justify-center align-center gap-250 f-width f-height'>
+
+        <figure>
+          <figcaption className="text-center">
+              <a href="https://storyset.com/people" target="_blank">People illustrations by Storyset</a>
+          </figcaption>
+          <NotFoundSvg />
+        </figure>
+      
+        <div className='flex flex-column align-center'>
+          <h1 className="not-found_404">404</h1>
+          <h2>Page Not Found</h2>
+        </div>
+      
+        <p className='text-center mb-200'>Oops! Sorry, we could not find the page</p>
+      
+        <button variant='button primary'>
+          Return Home
+        </button>
+      
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
