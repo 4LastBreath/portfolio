@@ -162,6 +162,10 @@
   padding: 1.8rem 1rem;
   border-radius: 8px;
 
+  @include mq(tablet-small) {
+    height: auto;
+  }
+
   &::before,
   &::after {
     content: '';
@@ -201,6 +205,14 @@
     outline: 1px solid $clr-accent-light;
   }
 
+}
+
+.project_logos-container {
+
+  @include mq(tablet-small) {
+    display: none;
+  }
+  
 }
 
 .project_logo-wrapper {
