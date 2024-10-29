@@ -10,11 +10,7 @@ const Contact = () => {
 
     <SectionTitle>Contact</SectionTitle>
     <div className='section_p'>
-      <p>Vous pouvez me contacter par mail, téléphone ou avec le formulaire ci-dessous:</p>
-      <ul className='contact_cord | mt-200'>
-        <li>4brian.fritz@gmail.com</li>
-        <li>06 48 64 89 77</li>
-      </ul>
+      <p>N'hésitez pas à me contacter en utilisant le formulaire ci-dessous.</p>
     </div>
     <ContactForm />
 

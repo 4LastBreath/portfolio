@@ -37,7 +37,7 @@ const Hero = () => {
   };
 
   const { ref, inView } = useInView({
-    threshold: 0.9,
+    threshold: 0.5,
   });
 
   useEffect(() => {

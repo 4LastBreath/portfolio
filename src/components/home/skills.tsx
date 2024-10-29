@@ -3,7 +3,7 @@ import SkillLogoContainer from '../skills/skillLogoContainer';
 import SectionHash from '../../layouts/sectionHash';
 import ShapeDivider from '../ui/shapeDivider';
 import { SectionParagraph, SectionTitle } from '../../layouts/section';
-import { ExpressJSLogo, MongoDbLogo, NextJSLogo, NodeJSLogo, ReactLogo, SassLogo } from '../logos';
+import { ExpressJSLogo, MongoDbLogo, NodeJSLogo, ReactLogo, SassLogo, TailwindLogo } from '../logos';
 
 const Skills = () => {
 
@@ -13,8 +13,8 @@ const Skills = () => {
       element: <ReactLogo />
     },
     {
-      name: 'NextJS',
-      element: <NextJSLogo />
+      name: 'TailwindCSS',
+      element: <TailwindLogo />
     },
     {
       name: 'Sass',

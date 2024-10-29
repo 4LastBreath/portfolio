@@ -1,12 +1,21 @@
 import SectionHash from "../../layouts/sectionHash";
 import { Link } from "react-router-dom";
 import { SectionTitle, SectionParagraph } from "../../layouts/section";
-import { JavascriptLogo, ReactLogo, SassLogo, TypescriptLogo } from "../logos";
+import { ExpressJSLogo, JavascriptLogo, ReactLogo, SassLogo, TailwindLogo, TypescriptLogo } from "../logos";
 import ProjectCard from "../projects/projectCard";
 
 const Projects = () => {
 
   const projectsArr = [
+    {
+      title: 'Todo App with Auth',
+      link: 'https://4lastbreath.github.io/dozy/',
+      logos: [
+        <ReactLogo />,
+        <ExpressJSLogo />,
+        <TailwindLogo />
+      ]
+    },
     {
       title: 'Expenses Calculator',
       link: 'https://4lastbreath.github.io/expenses-calculator/',
@@ -26,13 +35,6 @@ const Projects = () => {
     {
       title: 'Interactive Card Form',
       link: 'https://4lastbreath.github.io/Interactive-card-details-form-main/',
-      logos: [
-        <JavascriptLogo />
-      ]
-    },
-    {
-      title: 'Time Tracking Dashboard',
-      link: 'https://4lastbreath.github.io/Time-tracking-dashboard-main/',
       logos: [
         <JavascriptLogo />
       ]

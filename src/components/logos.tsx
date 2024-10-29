@@ -6,56 +6,62 @@ import nodeJS from '../styles/assets/img/nodeJS.png'
 import sass from '../styles/assets/img/sass.png'
 import typescript from '../styles/assets/img/typescript.png'
 import javascript from '../styles/assets/img/javascript.png'
+import tailwind from '../styles/assets/img/tailwind.png'
 
 interface LogoProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src?: string,
-  alt?: string
 }
 
-export const ReactLogo = ({ src, alt, ...props } : LogoProps) => {
+export const ReactLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={react || src} alt={'react logo' || alt} {...props} />
+    <img src={react || src} alt='react logo' {...props} />
   );
 };
 
-export const ExpressJSLogo = ({ src, alt, ...props } : LogoProps) => {
+export const ExpressJSLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={expressJS || src} alt={'expressJS logo' || alt} {...props} />
+    <img src={expressJS || src} alt='expressJS logo' {...props} />
   );
 };
 
-export const MongoDbLogo = ({ src, alt, ...props } : LogoProps) => {
+export const MongoDbLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={mongoDB || src} alt={'mongoDB logo' || alt} {...props} />
+    <img src={mongoDB || src} alt='mongoDB logo' {...props} />
   );
 };
 
-export const NextJSLogo = ({ src, alt, ...props } : LogoProps) => {
+export const NextJSLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={nextJS || src} alt={'nextJS logo' || alt} {...props} />
+    <img src={nextJS || src} alt='nextJS logo' {...props} />
   );
 };
 
-export const NodeJSLogo = ({ src, alt, ...props } : LogoProps) => {
+export const NodeJSLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={nodeJS || src} alt={'nodeJS logo' || alt} {...props} />
+    <img src={nodeJS || src} alt='nodeJS logo' {...props} />
   );
 };
 
-export const SassLogo = ({ src, alt, ...props } : LogoProps) => {
+export const SassLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={sass || src} alt={'sass logo' || alt} {...props} />
+    <img src={sass || src} alt='sass logo' {...props} />
   );
 };
 
-export const TypescriptLogo = ({ src, alt, ...props } : LogoProps) => {
+export const TypescriptLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={typescript || src} alt={'typescript logo' || alt} {...props} />
+    <img src={typescript || src} alt='typescript logo' {...props} />
   );
 };
 
-export const JavascriptLogo = ({ src, alt, ...props } : LogoProps) => {
+export const JavascriptLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={javascript || src} alt={'javascript logo' || alt} {...props} />
+    <img src={javascript || src} alt='javascript logo' {...props} />
+  );
+};
+
+export const TailwindLogo = ({ src, ...props } : LogoProps) => {
+  return (
+    <img src={tailwind || src} alt='tailwind logo' {...props} />
   );
 };
