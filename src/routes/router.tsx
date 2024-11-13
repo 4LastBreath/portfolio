@@ -6,7 +6,7 @@ import NotFound from "../pages/notFound";
 
 export const router = createBrowserRouter([
   {
-    path: '/portfolio/',
+    path: '/',
     element: <Home />, 
   },
   {
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     element: <NotFound />,
   },
   {
-    path: '/portfolio/contact',
+    path: '/contact',
     element: <Contact />
   }
 ])

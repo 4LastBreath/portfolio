@@ -23,7 +23,7 @@ const Header = ({setIsDrawerOpen, isDrawerOpen} : HeaderProps) => {
       scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
     >
       <img className='logo' src={logo} alt='logo'/>
-      <h1>Portfolio</h1>
+      <h1>Brian.F</h1>
     </HashLink>
 
     <nav className="nav-primary | f-height" aria-label="main">

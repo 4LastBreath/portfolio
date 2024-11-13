@@ -10,7 +10,8 @@ const Contact = () => {
 
     <SectionTitle>Contact</SectionTitle>
     <div className='section_p'>
-      <p>N'hésitez pas à me contacter en utilisant le formulaire ci-dessous.</p>
+      <p>Une idée de projet ? Des questions ?</p>
+      <p>N'hésitez pas à me contacter via le formulaire ci-dessous.</p>
     </div>
     <ContactForm />
 
