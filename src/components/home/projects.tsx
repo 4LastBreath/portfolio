@@ -17,6 +17,15 @@ const Projects = () => {
       ]
     },
     {
+      title: 'Space Tourism',
+      link: 'https://space-tourism-04.netlify.app/',
+      logos: [
+        <ReactLogo />,
+        <TypescriptLogo />,
+        <SassLogo />
+      ]
+    },
+    {
       title: 'Expenses Calculator',
       link: 'https://4lastbreath.github.io/expenses-calculator/',
       logos: [
