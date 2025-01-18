@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Plus } from 'lucide-react';
 import { Button } from '../ui/button';
-import cube from '../../styles/assets/img/cube.png'
+import cube from '../../styles/assets/img/cube.webp'
 import { useNavigate } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
