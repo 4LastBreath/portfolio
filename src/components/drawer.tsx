@@ -62,7 +62,7 @@ const Drawer = ({setIsOpen} : DrawerProps) => {
 
     <NavLink to='/' className="logo-link | flex gap-100 align-center justify-center">
       <img className='logo' src={logo} alt='logo'/>
-      <h1>Portfolio</h1>
+      <h1>Brian.F</h1>
     </NavLink>
 
     <div className='drawer_line | mx-auto'/>
