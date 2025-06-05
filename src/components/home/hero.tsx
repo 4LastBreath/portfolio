@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Plus } from 'lucide-react';
 import { Button } from '../ui/button';
 import cube from '../../styles/assets/img/cube.webp'
@@ -42,6 +42,7 @@ const Hero = () => {
   }
 
   const navigate = useNavigate()
+  const [isHeroImgLoaded, setIsHeroImgLoaded] = useState(false)
 
   const handleAboutClick = () => {
     navigate(`${routes.home}#skills`);
@@ -116,7 +117,8 @@ return (
       alt='multicolors cube'
       variants={heroImgVariants}
       initial='initial'
-      animate='animate'
+      animate={isHeroImgLoaded ? 'animate' : 'initial'}
+      onLoad={() => setIsHeroImgLoaded(true)}
     />
   </div>
 
