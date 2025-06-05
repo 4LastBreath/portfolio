@@ -119,6 +119,7 @@ return (
       variants={heroImgVariants}
       initial='initial'
       animate='animate'
+      loading='lazy'
     />
   </div>
 

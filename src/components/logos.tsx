@@ -15,60 +15,60 @@ interface LogoProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 
 export const ReactLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={react || src} alt='react logo' {...props} />
+    <img src={react || src} alt='react logo' {...props} loading='lazy'/>
   );
 };
 
 export const ExpressJSLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={expressJS || src} alt='expressJS logo' {...props} />
+    <img src={expressJS || src} alt='expressJS logo' {...props} loading='lazy'/>
   );
 };
 
 export const MongoDbLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={mongoDB || src} alt='mongoDB logo' {...props} />
+    <img src={mongoDB || src} alt='mongoDB logo' {...props} loading='lazy'/>
   );
 };
 
 export const NextJSLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={nextJS || src} alt='nextJS logo' {...props} />
+    <img src={nextJS || src} alt='nextJS logo' {...props} loading='lazy'/>
   );
 };
 
 export const NodeJSLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={nodeJS || src} alt='nodeJS logo' {...props} />
+    <img src={nodeJS || src} alt='nodeJS logo' {...props} loading='lazy'/>
   );
 };
 
 export const SassLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={sass || src} alt='sass logo' {...props} />
+    <img src={sass || src} alt='sass logo' {...props} loading='lazy'/>
   );
 };
 
 export const TypescriptLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={typescript || src} alt='typescript logo' {...props} />
+    <img src={typescript || src} alt='typescript logo' {...props} loading='lazy'/>
   );
 };
 
 export const JavascriptLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={javascript || src} alt='javascript logo' {...props} />
+    <img src={javascript || src} alt='javascript logo' {...props} loading='lazy'/>
   );
 };
 
 export const TailwindLogo = ({ src, ...props } : LogoProps) => {
   return (
-    <img src={tailwind || src} alt='tailwind logo' {...props} />
+    <img src={tailwind || src} alt='tailwind logo' {...props} loading='lazy'/>
   );
 };
 
 export const ReduxLogo = ({src, ...props} : LogoProps) => {
   return (
-    <img src={redux || src} alt='redux logo' {...props} />
+    <img src={redux || src} alt='redux logo' {...props} loading='lazy'/>
   )
 }
