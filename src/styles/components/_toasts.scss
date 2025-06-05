@@ -32,7 +32,7 @@
     border-radius: 2px;
     border-left: 3px solid;
     border-top: 3px solid;
-    border-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.2);
   }
 
   > * {
@@ -40,31 +40,39 @@
   }
 
   &.success {
-    background-color: hsl(120, 75%, 23%);
+    background-color: hsl(120, 66%, 30%);
 
     .toast_icon {
-      color: hsl(120, 100%, 80%);
+      color: hsl(120, 70%, 75%);
     }
 
     .toast_line::before {
-      background-color: hsl(120, 100%, 80%);
+      background-color: hsl(120, 70%, 75%);
+    }
+
+    &::before {
+      border-color: hsla(120, 70%, 75%, 0.5);
     }
   }
 
   &.error {
-    background-color: hsl(0, 72%, 27%);
+    background-color: hsl(0, 80%, 25%);
 
     .toast_icon {
-      color: hsl(0, 90%, 75%);
+      color: hsl(0, 85%, 70%);
     }
 
     .toast_line::before {
-      background-color: hsl(0, 90%, 75%);
+      background-color: hsl(0, 85%, 70%);
+    }
+
+    &::before {
+      border-color: hsla(0, 85%, 70%, 0.5);
     }
   }
 
   &.info {
-    background-color: $clr-primary-light;
+    background-color: hsl(199, 90%, 27%);
 
     .toast_icon {
       color: hsl(205, 67%, 75%);
@@ -72,6 +80,10 @@
 
     .toast_line::before {
       background-color: hsl(205, 67%, 75%);
+    }
+
+    &::before {
+      border-color: hsla(205, 67%, 75%, 0.5);
     }
   }
 }

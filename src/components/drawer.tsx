@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Backdrop from '../layouts/backdrop';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import logo from '../styles/assets/img/logo.png'
+import logo from '../styles/assets/img/logo.webp'
 import { useCurrentWidth } from '../hooks/useScreenSize';
 import { HashLink } from 'react-router-hash-link';
 import { navLinks, hashLinks } from '../utils/navLinks';

@@ -1,4 +1,4 @@
-import logo from '../styles/assets/img/logo.png'
+import logo from '../styles/assets/img/logo.webp'
 import { Menu } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 import { navLinks, hashLinks } from '../utils/navLinks';

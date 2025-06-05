@@ -1,7 +1,7 @@
 import SectionHash from "../../layouts/sectionHash";
 import { Link } from "react-router-dom";
 import { SectionTitle, SectionParagraph } from "../../layouts/section";
-import { ExpressJSLogo, JavascriptLogo, ReactLogo, SassLogo, TailwindLogo, TypescriptLogo } from "../logos";
+import { ExpressJSLogo, JavascriptLogo, ReactLogo, ReduxLogo, SassLogo, TailwindLogo, TypescriptLogo } from "../logos";
 import ProjectCard from "../projects/projectCard";
 
 const Projects = () => {
@@ -27,11 +27,11 @@ const Projects = () => {
     },
     {
       title: 'Expenses Calculator',
-      link: 'https://4lastbreath.github.io/expenses-calculator/',
+      link: 'https://spendy-budget.netlify.app/',
       logos: [
         <ReactLogo />,
-        <TypescriptLogo />,
-        <SassLogo />
+        <TailwindLogo />,
+        <ReduxLogo />
       ]
     },
     {

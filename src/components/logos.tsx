@@ -1,12 +1,13 @@
-import react from '../styles/assets/img/react.png'
-import expressJS from '../styles/assets/img/expressJS.png'
-import mongoDB from '../styles/assets/img/mongoDB.png'
-import nextJS from '../styles/assets/img/nextJS.png'
-import nodeJS from '../styles/assets/img/nodeJS.png'
-import sass from '../styles/assets/img/sass.png'
-import typescript from '../styles/assets/img/typescript.png'
-import javascript from '../styles/assets/img/javascript.png'
-import tailwind from '../styles/assets/img/tailwind.png'
+import react from '../styles/assets/img/react.webp'
+import expressJS from '../styles/assets/img/expressJS.webp'
+import mongoDB from '../styles/assets/img/mongoDB.webp'
+import nextJS from '../styles/assets/img/nextJS.webp'
+import nodeJS from '../styles/assets/img/nodeJS.webp'
+import sass from '../styles/assets/img/sass.webp'
+import typescript from '../styles/assets/img/typescript.webp'
+import javascript from '../styles/assets/img/javascript.webp'
+import tailwind from '../styles/assets/img/tailwind.webp'
+import redux from '../styles/assets/img/redux.webp'
 
 interface LogoProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src?: string,
@@ -65,3 +66,9 @@ export const TailwindLogo = ({ src, ...props } : LogoProps) => {
     <img src={tailwind || src} alt='tailwind logo' {...props} />
   );
 };
+
+export const ReduxLogo = ({src, ...props} : LogoProps) => {
+  return (
+    <img src={redux || src} alt='redux logo' {...props} />
+  )
+}

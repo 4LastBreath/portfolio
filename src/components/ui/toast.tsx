@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useTimeout  } from '../../hooks/useTimeout';
 import { CircleCheckBig, CircleX, Info, X } from 'lucide-react';
 import { IconButton } from './button';
@@ -15,7 +15,7 @@ export const Toast = ({message, variant, close} : ToastProps) => {
 
   const [isPresent, safeToRemove] = usePresence();
 
-  const icons: { [key in ToastProps['variant']]: React.ReactNode } = {
+  const icons: Record<ToastVariant, JSX.Element> = {
     info: <Info className='toast_icon' />,
     error: <CircleX className='toast_icon' />,
     success: <CircleCheckBig className='toast_icon' />
@@ -32,7 +32,8 @@ export const Toast = ({message, variant, close} : ToastProps) => {
   }, 5000)
 
   return (
-<motion.div 
+<motion.div
+  layout
   className={`toast ${variant} | relative flex space-between`}
   initial={{x: '-100%', opacity: 0, skewX: '-15deg'}}
   animate={{x: 0, opacity: 1}}

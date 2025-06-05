@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Plus } from 'lucide-react';
 import { Button } from '../ui/button';
 import cube from '../../styles/assets/img/cube.webp'
+import cubeMobile from '../../styles/assets/img/cube-mobile.webp'
 import { useNavigate } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
@@ -25,6 +26,21 @@ const Hero = () => {
     }
   }
 
+  const heroImgVariants = {
+    initial: {
+      opacity: 0,
+      translateY: '-10%',
+    },
+    animate: {
+      translateY: ['-10%', '2%', '0'], 
+      opacity: [0, 0.5, 1],
+      transition: {
+        duration: 1.2, 
+        times: [0, 0.6, 1], 
+      }
+    }
+  }
+
   const navigate = useNavigate()
 
   const handleAboutClick = () => {
@@ -34,11 +50,11 @@ const Hero = () => {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  };
+  }
 
   const { ref, inView } = useInView({
     threshold: 0.5,
-  });
+  })
 
   useEffect(() => {
     if (inView) {
@@ -89,12 +105,19 @@ return (
         />
       </div>
 
-      <img className='presentation_img' src={cube} alt='multicolors cube'/>
+      <img className='presentation_img' src={cubeMobile} alt='multicolors cube'/>
 
   </div>
 
   <div className="hero_img-container | flex align-center justify-center f-height">
-    <img className='hero_img' src={cube} alt='multicolors cube'/>
+    <motion.img 
+      className='hero_img' 
+      src={cube} 
+      alt='multicolors cube'
+      variants={heroImgVariants}
+      initial='initial'
+      animate='animate'
+    />
   </div>
 
 </section>
