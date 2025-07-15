@@ -27,21 +27,21 @@ const Hero = () => {
     }
   }
 
-  const heroImgVariants = {
-    initial: {
-      opacity: 0,
-      translateY: '-10%',
-    },
-    animate: {
-      translateY: ['-10%', '2%', '0'], 
-      opacity: [0, 0.5, 1],
-      transition: {
-        delay: 0.2,
-        duration: 1.2, 
-        times: [0, 0.6, 1], 
-      }
-    }
-  }
+  // const heroImgVariants = {
+  //   initial: {
+  //     opacity: 0,
+  //     translateY: '-10%',
+  //   },
+  //   animate: {
+  //     translateY: ['-10%', '2%', '0'], 
+  //     opacity: [0, 0.5, 1],
+  //     transition: {
+  //       delay: 0.2,
+  //       duration: 1.2, 
+  //       times: [0, 0.6, 1], 
+  //     }
+  //   }
+  // }
 
   const navigate = useNavigate()
 
@@ -112,14 +112,19 @@ return (
   </div>
 
   <div className="hero_img-container | flex align-center justify-center f-height">
-    <motion.img 
+    {/* <motion.img 
       className='hero_img' 
       src='/images/cube.webp' 
       alt='multicolors cube'
-      // variants={heroImgVariants}
-      // initial='initial'
-      // animate='animate'
-      // loading='lazy'
+      variants={heroImgVariants}
+      initial='initial'
+      animate='animate'
+      loading='lazy'
+    /> */}
+    <img 
+      className='hero_img' 
+      src='/images/cube.webp' 
+      alt='multicolors cube'
     />
   </div>
 
