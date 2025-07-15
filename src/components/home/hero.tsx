@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { Plus } from 'lucide-react';
 import { Button } from '../ui/button';
-import cube from '../../styles/assets/img/cube.webp'
-import cubeMobile from '../../styles/assets/img/cube-mobile.webp'
+// import cube from '../../styles/assets/img/cube.webp'
+// import cubeMobile from '../../styles/assets/img/cube-mobile.webp'
 import { useNavigate } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
@@ -107,19 +107,19 @@ return (
         />
       </div>
 
-      <img className='presentation_img' src={cubeMobile} alt='multicolors cube'/>
+      <img className='presentation_img' src='/images/cube-mobile.webp' alt='multicolors cube'/>
 
   </div>
 
   <div className="hero_img-container | flex align-center justify-center f-height">
     <motion.img 
       className='hero_img' 
-      src={cube} 
+      src='/images/cube.webp' 
       alt='multicolors cube'
-      variants={heroImgVariants}
-      initial='initial'
-      animate='animate'
-      loading='lazy'
+      // variants={heroImgVariants}
+      // initial='initial'
+      // animate='animate'
+      // loading='lazy'
     />
   </div>
 
