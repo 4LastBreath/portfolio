@@ -27,22 +27,6 @@ const Hero = () => {
     }
   }
 
-  // const heroImgVariants = {
-  //   initial: {
-  //     opacity: 0,
-  //     translateY: '-10%',
-  //   },
-  //   animate: {
-  //     translateY: ['-10%', '2%', '0'], 
-  //     opacity: [0, 0.5, 1],
-  //     transition: {
-  //       delay: 0.2,
-  //       duration: 1.2, 
-  //       times: [0, 0.6, 1], 
-  //     }
-  //   }
-  // }
-
   const navigate = useNavigate()
 
   const handleAboutClick = () => {
